@@ -312,7 +312,7 @@ input[type="submit"]:focus {
   ul.main-menu a {
     display: block;
     position: relative;
-    color: #000;
+    color: #fff;
     padding: 10px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
