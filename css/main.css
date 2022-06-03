@@ -483,8 +483,8 @@ input[type="submit"]:focus {
 
 .header-buttons .btn-primary {
   background-color: #FFBE33;
-  color: #000;
-  border-color: #000;
+  color: #bbb;
+  border-color: #bbb;
 }
 
 .header-buttons .btn-primary:hover {
