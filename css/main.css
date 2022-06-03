@@ -871,7 +871,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .block-title h3 span {
-  color: #04b4e0;
+  color: #FFBE33;
 }
 
 .block-title:after {
@@ -882,9 +882,9 @@ textarea.form-control, textarea.form-control:focus {
   content: '';
   height: 20px;
   width: 30px;
-  background-image: -webkit-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, #04b4e0, #04b4e0 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(center center, #FFBE33, #FFBE33 1px, transparent 0px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, #FFBE33, #FFBE33 1px, transparent 0px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, #FFBE33, #FFBE33 1px, transparent 0px, transparent 100%);
   -webkit-background-size: 6px 6px;
   -moz-background-size: 6px 6px;
   background-size: 6px 6px;
@@ -933,7 +933,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .info-list .title {
-  color: #04b4e0;
+  color: #FFBE33;
   margin-right: 5px;
   font-weight: 600;
 }
@@ -961,7 +961,7 @@ textarea.form-control, textarea.form-control:focus {
 .info-block-w-icon i {
   position: relative;
   font-size: 42px;
-  color: #04b4e0;
+  color: #FFBE33;
   opacity: .7;
 }
 /* --- End Info block with Icon --- */
@@ -1286,7 +1286,7 @@ textarea.form-control, textarea.form-control:focus {
   position: relative;
   display: inline-block;
   background-color: #222;
-  border: 1px solid #04b4e0;
+  border: 1px solid #FFBE33;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
