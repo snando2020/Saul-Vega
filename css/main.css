@@ -1214,7 +1214,7 @@ textarea.form-control, textarea.form-control:focus {
   position: absolute;
   margin-left: -8px;
   border-radius: 10px;
-  background-color: #04b4e0;
+  background-color: #FFBE33;
   opacity: .25;
   z-index: 0;
 }
