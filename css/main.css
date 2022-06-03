@@ -836,7 +836,7 @@ textarea.form-control, textarea.form-control:focus {
 
 .form-group .form-control:focus ~ label,
 .form-group.form-group-focus .form-control ~ label {
-  color: #04b4e0;
+  color: #FFBE33;
   top: -20px;
   left: 0;
   z-index: 1;
