@@ -711,7 +711,7 @@ textarea.form-control, textarea.form-control:focus {
   top: 0;
   opacity: 0;
   background: transparent;
-  border: 2px solid #04b4e0;
+  border: 2px solid #FFBE33;
   border-right-width: 0;
   height: 100%;
   -webkit-transition: all 0.3s ease-in-out;
