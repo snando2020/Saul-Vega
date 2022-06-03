@@ -482,7 +482,7 @@ input[type="submit"]:focus {
 }
 
 .header-buttons .btn-primary {
-  background-color: transparent;
+  background-color: #FFBE33;
   color: #f5f5f5;
   border-color: #f5f5f5;
 }
