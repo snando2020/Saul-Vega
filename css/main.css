@@ -324,7 +324,7 @@ input[type="submit"]:focus {
   ul.main-menu a.active,
   ul.main-menu a:focus,
   ul.main-menu a:hover {
-    color: #04b4e0;
+    color: #000;
   }
 
   ul.main-menu .menu-icon {
