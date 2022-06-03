@@ -1391,7 +1391,7 @@ textarea.form-control, textarea.form-control:focus {
   display: inline-block;
   background-color: #FFBE33;
   border-radius: 3px;
-  color: #fff;
+  color: #666;
   padding: 1px 10px;
   margin: 3px 2px;
   font-size: 13px;
