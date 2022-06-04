@@ -17,13 +17,13 @@ function setToRandom(scale) {
 // Factory to make a PacMan at a random position with random velocity
 function makePac() {
     // returns an object with random values scaled {x: 33, y: 21}
-    let velocity = setToRandom(1); // {x:?, y:?}
-    let position = setToRandom(2);
+    let velocity = setToRandom(10); // {x:?, y:?}
+    let position = setToRandom(200);
 
     // Add image to div id = game
     let game = document.getElementById('game');
     let newimg = document.createElement('img');
-    newimg.style.position = 'relative';
+    newimg.style.position = 'absolute';
     newimg.src = 'project1/images/PacMan1.png';
     newimg.width = 100;
 
@@ -51,7 +51,7 @@ function update() {
         item.newimg.style.left = item.position.x;
         item.newimg.style.top = item.position.y;
     });
-    setTimeout(update, 1);
+    setTimeout(update, 1000);
 }
 
 function checkCollisions(item) {
