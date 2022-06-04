@@ -1,4 +1,5 @@
 let pos = 0;
+var game = document.getElementById('game');
 const pacArray = [
     ['project1/images/PacMan1.png', 'project1/images/PacMan2.png'],
     ['project1/images/PacMan3.png', 'project1/images/PacMan4.png'],
@@ -21,7 +22,7 @@ function makePac() {
     let position = setToRandom(200);
 
     // Add image to div id = game
-    let game = document.getElementById('game');
+
     let newimg = document.createElement('img');
     newimg.style.position = 'absolute';
     newimg.src = 'project1/images/PacMan1.png';
