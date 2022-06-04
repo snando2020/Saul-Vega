@@ -1,7 +1,0 @@
-#game {
-    position: relative;
-    /**/
-    border: 5px solid blue;
-    border-radius: 10px;
-    background: black url(../images/pacmanbg.webp) no-repeat center;
-}
