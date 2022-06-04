@@ -1,7 +1,9 @@
+let pos = 0;
 const pacArray = [
     ['project1/images/PacMan1.png', 'project1/images/PacMan2.png'],
     ['project1/images/PacMan3.png', 'project1/images/PacMan4.png'],
 ];
+let direction = 0;
 const pacMen = []; // This array holds all the pacmen
 
 // This function returns an object with random values
@@ -61,13 +63,13 @@ function update() {
 function checkCollisions(item) {
     // TODO: detect collision with all walls and make pacman bounce
     if (
-        item.position.x + item.velocity.x + item.newimg.width > 800 ||
+        item.position.x + item.velocity.x + item.newimg.width > game.offsetWidth ||
         item.position.x + item.velocity.x < 0
     )
         item.velocity.x = -item.velocity.x;
     if (
         item.position.y + item.velocity.y + item.newimg.height >
-        600 ||
+        game.offsetHeight ||
         item.position.y + item.velocity.y < 0
     )
         item.velocity.y = -item.velocity.y;
