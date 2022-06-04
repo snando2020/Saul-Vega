@@ -1,9 +1,7 @@
-let pos = 0;
 const pacArray = [
     ['project1/images/PacMan1.png', 'project1/images/PacMan2.png'],
     ['project1/images/PacMan3.png', 'project1/images/PacMan4.png'],
 ];
-let direction = 0;
 const pacMen = []; // This array holds all the pacmen
 
 // This function returns an object with random values
