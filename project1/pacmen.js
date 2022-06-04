@@ -4,7 +4,6 @@ const pacArray = [
     ['project1/images/PacMan1.png', 'project1/images/PacMan2.png'],
     ['project1/images/PacMan3.png', 'project1/images/PacMan4.png'],
 ];
-
 const pacMen = []; // This array holds all the pacmen
 var focus = 0;
 var direction = 0;
@@ -62,13 +61,13 @@ function update() {
 function checkCollisions(item) {
     // TODO: detect collision with all walls and make pacman bounce
     if (
-        item.position.x + item.velocity.x + item.newimg.width > game.offsetWidth ||
+        item.position.x + item.velocity.x + item.newimg.width > gameWidth ||
         item.position.x + item.velocity.x < 0
     )
         item.velocity.x = -item.velocity.x;
     if (
         item.position.y + item.velocity.y + item.newimg.height >
-        game.offsetHeight ||
+        gameHeight ||
         item.position.y + item.velocity.y < 0
     )
         item.velocity.y = -item.velocity.y;
