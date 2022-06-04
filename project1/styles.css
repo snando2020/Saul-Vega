@@ -1,8 +1,7 @@
 #game {
-    width: 70%;
-    height: 70%;
-    border: 10px double hotpink;
-    box-shadow: inset 0 0px 4px hotpink, 0 0px 5px hotpink, 0 0px 10px coral;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #FFBE33;
     border-radius: 25px;
     margin-top: 10px;
     position: relative;
