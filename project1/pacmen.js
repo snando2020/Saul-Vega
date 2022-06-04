@@ -50,6 +50,12 @@ function update() {
 
         item.newimg.style.left = item.position.x;
         item.newimg.style.top = item.position.y;
+        if (item.velocity.x > 0) {
+            item.newimg.direction = 0;
+        } else {
+            item.newimg.direction = 1;
+        }
+        item.newimg.src = pacArray[item.newimg.direction][(Math.random() >= 0.5) ? 1 : 0];
     });
     setTimeout(update, 1000);
 }
@@ -71,9 +77,4 @@ function checkCollisions(item) {
 
 function makeOne() {
     pacMen.push(makePac()); // add a new PacMan
-}
-
-//don't change this line
-if (typeof module !== 'undefined') {
-    module.exports = { checkCollisions, update, pacMen };
 }
