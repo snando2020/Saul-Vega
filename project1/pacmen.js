@@ -23,7 +23,7 @@ function makePac() {
     // Add image to div id = game
     let game = document.getElementById('game');
     let newimg = document.createElement('img');
-    newimg.style.position = 'absolute';
+    newimg.style.position = 'relative';
     newimg.src = 'project1/images/PacMan1.png';
     newimg.width = 100;
 
@@ -57,7 +57,7 @@ function update() {
         }
         item.newimg.src = pacArray[item.newimg.direction][(Math.random() >= 0.5) ? 1 : 0];
     });
-    setTimeout(update, 1000);
+    setTimeout(update, 150);
 }
 
 function checkCollisions(item) {
