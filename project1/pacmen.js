@@ -21,7 +21,7 @@ function makePac() {
     // Add image to div id = game
     let game = document.getElementById('game');
     let newimg = document.createElement('img');
-    newimg.style.position = 'relative';
+    newimg.style.position = 'absolute';
     newimg.src = 'project1/images/PacMan1.png';
     newimg.width = 100;
 
