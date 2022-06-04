@@ -55,7 +55,7 @@ function update() {
         } else {
             item.newimg.direction = 1;
         }
-        item.newimg.src = pacArray[item.newimg.direction][(Math.random() >= 0.5) ? 1 : 0];
+        item.newimg.src = pacArray[item.direction][(Math.random() >= 0.5) ? 1 : 0];
     });
     setTimeout(update, 150);
 }
