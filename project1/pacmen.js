@@ -52,7 +52,7 @@ function update() {
         item.newimg.style.left = item.position.x + 'px';
         item.newimg.style.top = item.position.y + 'px';
     })
-    setTimeout(update, 1000);
+    setTimeout(update, 100);
 }
 
 function checkCollisions(item) {
