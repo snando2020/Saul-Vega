@@ -3,7 +3,6 @@ const pacArray = [
     ['./project1/images/PacMan1.png', './project1/images/PacMan2.png'],
     ['./project1/images/PacMan3.png', './project1/images/PacMan4.png']
 ];
-var target = 0;
 var direction = 0;
 const pacMen = []; // This array holds all the pacmen        
 function setToRandom(scale) {
@@ -36,21 +35,24 @@ function makePac() {
         position,
         velocity,
         newimg,
-        direction,
-        target
+        direction
     }
 }
 
 function update() {
     //loop over pacmen array and move each one and move image in DOM
     pacMen.forEach((item) => {
-        item.target = (item.target + 1) % 2;
-        item.newimg.src = pacArray[item.direction][item.target];
         checkCollisions(item)
         item.position.x += item.velocity.x;
         item.position.y += item.velocity.y;
         item.newimg.style.left = item.position.x + 'px';
         item.newimg.style.top = item.position.y + 'px';
+        if (item.velocity.x > 0) {
+            item.newimg.direction = 0;
+        } else {
+            item.newimg.direction = 1;
+        }
+        item.newimg.src = pacArray[item.newimg.direction][(Math.random() >= 0.5) ? 1 : 0];
     })
     setTimeout(update, 100);
 }
