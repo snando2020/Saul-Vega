@@ -1,5 +1,4 @@
 #game {
     position: relative;
-    width: 800px;
-    height: 800px;
+    border: 5px solid #FFBE33;
 }
