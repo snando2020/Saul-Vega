@@ -49,8 +49,8 @@ function update() {
         checkCollisions(item)
         item.position.x += item.velocity.x;
         item.position.y += item.velocity.y;
-        item.newimg.style.left = item.position.x;
-        item.newimg.style.top = item.position.y;
+        item.newimg.style.left = item.position.x + 'px';
+        item.newimg.style.top = item.position.y + 'px';
     })
     setTimeout(update, 1000);
 }
