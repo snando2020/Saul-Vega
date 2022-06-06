@@ -26,8 +26,8 @@ function makePac() {
     //
     // set position here 
     //
-    newimg.style.left = position.x;
-    newimg.style.top = position.y;
+    newimg.style.left = position.x + 'px';
+    newimg.style.top = position.y + 'px';
 
     // add new Child image to game
     game.appendChild(newimg);
