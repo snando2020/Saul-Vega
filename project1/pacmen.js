@@ -44,7 +44,7 @@ function makePac() {
 function update() {
     //loop over pacmen array and move each one and move image in DOM
     pacMen.forEach((item) => {
-        item.target = (item.target + 1) % 2;
+        item.target = (Math.random() + 1) % 2;
         item.newimg.src = pacArray[item.direction][item.target];
         checkCollisions(item)
         item.position.x += item.velocity.x;
@@ -59,7 +59,7 @@ function checkCollisions(item) {
     if (item.position.x + item.velocity.x + item.newimg.width > document.getElementById('game').clientWidth || item.position.x + item.velocity.x < 0) {
         item.velocity.x = -item.velocity.x;
     }
-    if (item.position.y + item.velocity.y + item.newimg.height > document.getElementById('game').clientHeight || item.position.y + item.velocity.y < 0) {
+    if (item.position.y + item.velocity.y + item.newimg.height > document.getElementById('description').clientHeight || item.position.y + item.velocity.y < 0) {
         item.velocity.y = -item.velocity.y;
     }
 }
