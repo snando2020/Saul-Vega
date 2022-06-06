@@ -1,6 +1,3 @@
-var gameWidth = document.getElementById('game').clientWidth
-var gameHeight = document.getElementById('game').clientHeight
-
 const pacArray = [
     ['./project1/images/PacMan1.png', './project1/images/PacMan2.png'],
     ['./project1/images/PacMan3.png', './project1/images/PacMan4.png']
@@ -72,11 +69,11 @@ function checkCollisions(item) {
     // detect collision with all walls and make pacman bounce
     //
 
-    if (item.position.x + item.velocity.x + item.newimg.width > gameWidth ||
+    if (item.position.x + item.velocity.x + item.newimg.width > 800 ||
         item.position.x + item.velocity.x <= 0) {
         item.velocity.x = -item.velocity.x;
     }
-    if (item.position.y + item.velocity.y + item.newimg.height > gameHeight ||
+    if (item.position.y + item.velocity.y + item.newimg.height > 600 ||
         item.position.y + item.velocity.y <= 0) {
         item.velocity.y = -item.velocity.y;
     }
