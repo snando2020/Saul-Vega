@@ -52,14 +52,14 @@ function update() {
         item.newimg.style.left = item.position.x + 'px';
         item.newimg.style.top = item.position.y + 'px';
     })
-    setTimeout(update, 100);
+    setTimeout(update, 1000);
 }
 
 function checkCollisions(item) {
-    if (item.position.x + item.velocity.x + item.newimg.width > game.width || item.position.x + item.velocity.x < 0) {
+    if (item.position.x + item.velocity.x + item.newimg.width > window.innerWidth || item.position.x + item.velocity.x < 0) {
         item.velocity.x = -item.velocity.x;
     }
-    if (item.position.y + item.velocity.y + item.newimg.height > game.height || item.position.y + item.velocity.y < 0) {
+    if (item.position.y + item.velocity.y + item.newimg.height > window.innerHeight || item.position.y + item.velocity.y < 0) {
         item.velocity.y = -item.velocity.y;
     }
 }
