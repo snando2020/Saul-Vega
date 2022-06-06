@@ -44,7 +44,7 @@ function makePac() {
 function update() {
     //loop over pacmen array and move each one and move image in DOM
     pacMen.forEach((item) => {
-        item.target = (Math.floor(Math.random()) + 1) % 2;
+        item.target = (item.target + 1) % 2;
         item.newimg.src = pacArray[item.direction][item.target];
         checkCollisions(item)
         item.position.x += item.velocity.x;
