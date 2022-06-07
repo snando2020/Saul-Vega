@@ -1,9 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #map {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 800px;
-    height: 600px;
+    width: 100%;
 }
 
 .map-overlay {

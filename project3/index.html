@@ -1,68 +1,23 @@
-<link rel="stylesheet" href="project3/styles.css" type="text/css">
+<!DOCTYPE html>
+<html>
 
-<div id="ajax-page" class="ajax-page-content">
-    <div class="ajax-page-wrapper">
-        <div class="ajax-page-nav">
-            <div class="nav-item ajax-page-close-button">
-                <a id="ajax-page-close-button" href="#"><i class="lnr lnr-cross"></i></a>
-            </div>
-        </div>
+<head>
+    <meta charset="utf-8" />
+    <title>Map Animation</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+</head>
 
-        <div class="ajax-page-title">
-            <h1>Real Time Bus Tracking</h1>
-        </div>
-        <div id="map"></div>
-        <div class="map-overlay top">
-            <button style="font-size: 12px" onclick="move()">
-                            Show stops between MIT and Harvard
-                        </button>
-        </div>
-        <div class="row">
-            <div class="col-sm-8 col-md-8 portfolio-block">
-                <div class="row">
-                </div>
-            </div>
-            <div class="col-sm-4 col-md-4 portfolio-block">
-                <!-- Project Description -->
-                <div class="project-description" id="description">
-                    <div class="block-title">
-                        <h3>Description</h3>
-                    </div>
-                    <ul class="project-general-info">
-                        <li>
-                            <p><i class="fa fa-user"></i> Saul F. Vega Montenegro</p>
-                        </li>
-                        <li>
-                            <p><i class="fa fa-globe"></i> <a href="https://snando2020.github.io/#portfolio/project1" target="_blank">https://snando2020.github.io/</a></p>
-                        </li>
-                        <li>
-                            <p><i class="fa fa-calendar"></i> 01 June, 2022</p>
-                        </li>
-                        <li>
-                            <p><i class="fab fa-github"></i><span><a href="https://github.com/snando2020/PacMenFactory" target="_blank">  Repository github</a></span></p>
-                        </li>
-
-                    </ul>
-
-                    <p class="text-justify">The code was developed by creating a collision function that detects the edges of an area such as a div in which the image changes direction, the position of the image was worked on as well as the movement times.</p>
-                    <!-- /Project Description -->
-
-                    <!-- Technology -->
-                    <div class="tags-block">
-                        <div class="block-title">
-                            <h3>Technology</h3>
-                        </div>
-                        <ul class="tags">
-                            <li><a>HTML</a></li>
-                            <li><a>CSS</a></li>
-                            <li><a>Javascript</a></li>
-                        </ul>
-                    </div>
-                    <!-- /Technology -->
-
-                </div>
-                <!-- Project Description -->
-            </div>
-        </div>
+<body>
+    <div id="map"></div>
+    <div class="map-overlay top">
+        <button style="font-size: 2em" onclick="move()">
+            Show stops between MIT and Harvard
+        </button>
     </div>
-</div>
+    <script src="./bustracker.js"></script>
+</body>
+
+</html>
