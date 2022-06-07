@@ -31,27 +31,3 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-
-.eye2 {
-    width: 62px;
-    top: 280px;
-    left: 280px;
-    height: 100px;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    overflow: hidden;
-    transform: rotate(-17deg);
-    border: 1px solid #000
-}
-
-.ball2 {
-    width: 30px;
-    height: 40px;
-    background: radial-gradient(#fff 5%, #000 25%, #000 50%);
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}
