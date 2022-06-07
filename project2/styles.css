@@ -1,0 +1,10 @@
+   .marco {
+       margin-top: 10px;
+       width: 220px;
+       height: 350px;
+       border: 25px solid rgb(53, 47, 47);
+       background: #eee;
+       flex: 1;
+       padding: 15px 10px;
+       position: relative;
+   }
