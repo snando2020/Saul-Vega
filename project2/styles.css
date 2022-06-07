@@ -3,6 +3,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+    background-image: url('../project2/images/tiny.png');
     text-align: center;
 }
 
