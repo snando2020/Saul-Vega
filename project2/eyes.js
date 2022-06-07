@@ -1,4 +1,5 @@
-const balls = document.getElementsByClassName('ball');
+const balls1 = document.getElementsByClassName('ball1');
+const balls2 = document.getElementsByClassName('ball2');
 document.onmousemove = (event) => {
     const x = (event.clientX * 100) / window.innerWidth + '%';
     const y = (event.clientY * 100) / window.innerHeight + '%';
