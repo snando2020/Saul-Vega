@@ -9,7 +9,7 @@
 .eye {
     width: 80px;
     height: 160px;
-    background: url("project2/images/eyes.png") no repeat;
+    background: #fff;
     display: inline-block;
     margin: 40px;
     border-radius: 50%;
