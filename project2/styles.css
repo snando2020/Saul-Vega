@@ -6,14 +6,9 @@
 
 .eye {
     border: 3px solid #000000;
-    background-image: url('project2/images/eyes.png');
+    background-image: url('project2/images/eyes.png') no-repeat;
     width: 146px;
     height: 112px;
-    display: inline-block;
-    margin: -6px;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
 }
 
 .ball1 {
