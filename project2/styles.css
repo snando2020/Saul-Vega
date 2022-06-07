@@ -1,15 +1,3 @@
-.eyes {
-    position: absolute;
-    text-align: center;
-}
-
-.eye {
-    border: 3px solid #000000;
-    background-image: url('../project2/images/eyes.png') no-repeat;
-    width: 146px;
-    height: 112px;
-}
-
 .ball1 {
     width: 20px;
     height: 20px;
