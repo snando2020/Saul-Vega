@@ -4,8 +4,8 @@ document.onmousemove = (event) => {
     const y = (event.clientY * 100) / window.innerHeight + '%';
 
     for (let i = 0; i < 2; i++) {
-        balls[i].styles.left = x;
-        balls[i].styles.top = y;
+        balls[i].styles.left = x + 'px';
+        balls[i].styles.top = y + 'px';
         balls[i].transform = `translate(-${x},-${y})`;
     }
 };
