@@ -1,8 +1,7 @@
 var markers = [];
 
 // Keys
-mapboxgl.accessToken =
-    "pk.eyJ1Ijoic25hbmRvMjAyMiIsImEiOiJjbDQzeGM5aWwwMG5tM2ZwYWV6M3I3NnljIn0.E9vtOeSvdIXxSAAP8r3qzg";
+mapboxgl.accessToken = "pk.eyJ1Ijoic25hbmRvMjAyMiIsImEiOiJjbDQzeGM5aWwwMG5tM2ZwYWV6M3I3NnljIn0.E9vtOeSvdIXxSAAP8r3qzg";
 
 // Creando una nueva instancia de Mapa de la biblioteca Mapbox
 var map = new mapboxgl.Map({
