@@ -1,8 +1,8 @@
 const balls1 = document.getElementsByClassName('ball1');
 const balls2 = document.getElementsByClassName('ball2');
 document.onmousemove = (event) => {
-    const x = (event.clientX * 100) / window.innerWidth + '%';
-    const y = (event.clientY * 100) / window.innerHeight + '%';
+    const x = ((event.clientX * 100) / window.innerWidth) + 'px';
+    const y = ((event.clientY * 100) / window.innerHeight) + 'px';
 
     balls1.style.left = x;
     balls1.style.top = y;
