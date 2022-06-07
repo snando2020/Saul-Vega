@@ -33,6 +33,7 @@ function move() {
     // TODO: move the marker on the map every 1000ms. Use the function marker.setLngLat() to update the marker coordinates
     // Use counter to access bus stops in the array busStops
     // Make sure you call move() after you increment the counter.
+    busStops.forEach(element => new mapboxgl.Marker().setLngLat(element).addTo(map));
     setTimeout(() => {
         if (counter >= busStops.length) return;
         marker.setLngLat(busStops[counter]);
