@@ -4,7 +4,8 @@
     transform: translateY(-50%);
     width: 100%;
     height: 100%;
-    background-image: url('../project2/images/tiny.png') no-repeat;
+    background-image: url('../project2/images/tiny.png');
+    background-repeat: no-repeat;
     text-align: center;
 }
 
