@@ -1,43 +1,54 @@
-// This array contains the coordinates for all bus stops between MIT and Harvard
-const busStops = [
-    [-71.093729, 42.359244],
-    [-71.094915, 42.360175],
-    [-71.0958, 42.360698],
-    [-71.099558, 42.362953],
-    [-71.103476, 42.365248],
-    [-71.106067, 42.366806],
-    [-71.108717, 42.368355],
-    [-71.110799, 42.369192],
-    [-71.113095, 42.370218],
-    [-71.115476, 42.372085],
-    [-71.117585, 42.373016],
-    [-71.118625, 42.374863],
-];
+var markers = [];
 
-// TODO: add your own access token
-mapboxgl.accessToken = 'pk.eyJ1Ijoic25hbmRvMjAyMiIsImEiOiJjbDN0dXAxaHoxY3poM2txZWJmZ2Y3bXM3In0.3QmaJOK8K2C0O-6yhE8O8w';
+// Keys
+mapboxgl.accessToken =
+    "pk.eyJ1Ijoic25hbmRvMjAyMiIsImEiOiJjbDQzeGM5aWwwMG5tM2ZwYWV6M3I3NnljIn0.E9vtOeSvdIXxSAAP8r3qzg";
 
-// This is the map instance
-let map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
+// Creando una nueva instancia de Mapa de la biblioteca Mapbox
+var map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/mapbox/streets-v11",
     center: [-71.104081, 42.365554],
-    zoom: 14,
+    zoom: 13,
 });
 
-// TODO: add a marker to the map at the first coordinates in the array busStops. The marker variable should be named "marker"
-let marker = new mapboxgl.Marker().setLngLat([-71.093729, 42.359244]).addTo(map);
-// counter here represents the index of the current bus stop
-let counter = 0;
-
-function move() {
-    // TODO: move the marker on the map every 1000ms. Use the function marker.setLngLat() to update the marker coordinates
-    // Use counter to access bus stops in the array busStops
-    // Make sure you call move() after you increment the counter.
-    setTimeout(() => {
-        if (counter >= busStops.length) return;
-        marker.setLngLat(busStops[counter]);
-        counter++;
-        move();
-    }, 1000);
+// Crear la función para obtener los datos de la API
+async function getBusData() {
+    const url = "https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip";
+    const res = await fetch(url);
+    const data = res.json();
+    return data;
 }
+
+// Crear la función para tener los Markers de manera dinamica con sus colores
+// y Longitud y Latitud
+
+let markersSet = [];
+let popUpSet = [];
+
+async function createMarkers() {
+    let busesJson = await getBusData();
+    let busesArray = busesJson.data;
+
+    for (let index = 0; index < markersSet.length; index++) {
+        markersSet[index].remove();
+        popUpSet[index].remove();
+    }
+
+    for (let index = 0; index < busesArray.length; index++) {
+        let bus = busesArray[index];
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([bus.attributes.longitude, bus.attributes.latitude])
+            .addTo(map);
+        markersSet.push(marker);
+
+        const popup = new mapboxgl.Popup({ closeOnClick: false, offset: 50 })
+            .setLngLat([bus.attributes.longitude, bus.attributes.latitude])
+            .setText(`Bus: ${bus.attributes.label}`)
+            .addTo(map);
+        popUpSet.push(popup);
+    }
+}
+
+setInterval(createMarkers, 5000);
